@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "issues",
+  "info": {
+    "singularName": "issue",
+    "pluralName": "issues",
+    "displayName": "Issue",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subTitle": {
+      "type": "string",
+      "required": true
+    },
+    "assignedTo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "startDate": {
+      "type": "date",
+      "required": true,
+      "default": "2022-03-09"
+    },
+    "endDate": {
+      "type": "date",
+      "required": true,
+      "default": "2022-03-24"
+    },
+    "priority": {
+      "type": "enumeration",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "required": false,
+      "default": "low"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "inProgress",
+        "completed"
+      ],
+      "default": "new"
+    },
+    "completedPercentage": {
+      "type": "integer",
+      "required": false,
+      "default": 1
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

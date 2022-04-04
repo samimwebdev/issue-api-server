@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_layout_popular_posts",
+  "info": {
+    "displayName": "PopularPost",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    }
+  }
+}
